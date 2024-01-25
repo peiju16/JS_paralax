@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section>
+        <img src="img/bg.jpg" id="bg">
+        <img src="img/moon.png" id="moon">
+        <img src="img/mountain.png" id="mountain">
+        <img src="img/road.png" id="road">
+        <h2 id="text"> Moon Light</h2>
+    </section>
+
+    <script>
+
+        const bg = document.getElementById("bg");
+        const moon = document.getElementById("moon");
+        const mountain = document.getElementById("mountain");
+        const road = document.getElementById("road");
+        const text = document.getElementById("text");
+
+        window.addEventListener("scroll", function() {
+            
+            // récupérer la position du scroll  la vertical (de l'écran window)
+            let scroll = window.scrollY;
+
+            bg.style.top = scroll * 0.5 + "px";
+            moon.style.left = -scroll * 0.5 + "px";
+            mountain.style.top = -scroll * 0.5 + "px";
+            road.style.top = scroll * 0.5 + "px";
+            text.style.top = scroll * 1 + "px";
+        });
+
+
+    </script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="js/parallaxie.js"></script> -->
+
+</body>
+</html>
